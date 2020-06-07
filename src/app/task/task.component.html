@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-7">
+        <app-task-list></app-task-list>
+    </div>
+    <div class="col-md-5">
+        <form [formGroup]="this.taskservice.form" (ngSubmit)="onSubmit()">
+            <input type="hidden" formControlName="$key">
+            <div class="form-group">
+                <label >TaskName</label>
+                <input formControlName="name" class="form-control" [ngClass]="{'is-invalid':submit && formControls.name.errors}">
+            </div>
+            <div class="invalid-feedback" *ngIf="submit && formControls.name.errors">
+                Invalid Input.
+            </div>
+            <div class="form-group">
+                <label >Description</label>
+                <input formControlName="description" class="form-control" [ngClass]="{'is-invalid':submit && formControls.description.errors}">
+            </div>
+            <div class="invalid-feedback" *ngIf="submit && formControls.description.errors">
+                Invalid Input.
+            </div>
+            <div class="form-group">
+                <label >Status</label>
+                <input formControlName="status" class="form-control" [ngClass]="{'is-invalid':submit && formControls.status.errors}">
+            </div>
+            <div class="invalid-feedback" *ngIf="submit && formControls.status.errors">
+                Invalid Input.
+            </div>
+            <div class="form-group">
+                <label >Date</label>
+                <input formControlName="date" class="form-control" [ngClass]="{'is-invalid':submit && formControls.date.errors}">
+            </div>
+            <div class="invalid-feedback" *ngIf="submit && formControls.date.errors">
+                Invalid Input.
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Add/Update">
+            </div>
+        </form>
+        <div class="alert alert-info" *ngIf="success">
+            Added/Updated Successfully.
+        </div>
+    </div>
+</div>
