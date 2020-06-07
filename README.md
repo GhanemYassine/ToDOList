@@ -1,9 +1,9 @@
 # ToDoList
 school project
-##main page
+## Main page
 ![Main Screen](images/Capture.PNG)
-##adding tasks
+## Adding tasks
 ![Main Screen](images/Capture.PNG)
-## deleting tasks
-![Main Screen](images/delete.PNG)
+## Deleting tasks
+![Main Screen](images/delete1.PNG)
 
